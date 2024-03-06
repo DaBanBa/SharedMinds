@@ -7,6 +7,15 @@ body{
     flex-direction: column;
 }
 
+#startGameButton{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #92acd2;
+    color: black;
+    cursor: pointer;
+
+}
+
 #answeringZone{
     display: none;
     justify-content: center;
