@@ -76,7 +76,9 @@ function checkInputMatch(inputValue, selectedPrompt) {
     if (inputValue == selectedPrompt) {
         alert("You got it!");
         window.location.reload();
-    } else {
+    } else if(matchingWords.length == 0) {
+        alert("No matching words! Try again!");
+    } else{
         alert("The words " + matchingWords + " exist in the prompt! Try again!");
     }
 }
