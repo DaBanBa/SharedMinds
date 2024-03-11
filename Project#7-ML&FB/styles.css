@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#answeringZone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 12px;
+}
+
+#submitButt{
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #92acd2;
+    color: black;
+    cursor: pointer;
+}
+
+#submitButt:hover{
+    background-color: #3e526d;
+}
+
+#inputValue{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f0f0;
+}
