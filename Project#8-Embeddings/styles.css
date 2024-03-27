@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    font-size: 16px;
+    padding: 0;
+  }
+  
+  #title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #answeringZone {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #inputValue {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  #submitButt {
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  #submitButt:hover {
+    background-color: #0056b3;
+  }
+  
+  #guesses {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .guessStyles{
+    margin-top: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: #ccc 1px solid;
+    border-radius: 3px;
+  }
+
+  .Correctness{
+    color: #f8f8f8;
+    padding: 5px;
+    border-radius: 3px;
+    width: 64px;
+    text-align: center;
+  }
