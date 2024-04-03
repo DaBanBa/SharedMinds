@@ -4,6 +4,7 @@
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="utf-8" />
     <title>Guess The Object!</title>
@@ -16,10 +17,10 @@
         <input type="text" id="inputValue" placeholder="your answer is"/>
         <div id="submitButt">Submit</div>
         <div id="guesses">
-            <div class="text">Past Guesses:</div>
+            <canvas id="myCanvas" width="1000" height="500"></canvas>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>
