@@ -20,7 +20,6 @@ class Square {
     this.dead = false;
     this.knockedBack = false;
     this.lastShootTime = 0;
-    this.animal = animal;
     this.level = Level;
     this.experience = experience;
   }
