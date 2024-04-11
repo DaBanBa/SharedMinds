@@ -2,7 +2,7 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 class Square {
-  constructor(name, attack, HP, x, y, speed, power, color, job) {
+  constructor(name, attack, HP, x, y, speed, power, color, job, Level, experience) {
     this.name = name;
     this.attack = attack;
     this.currentHP = HP;
@@ -20,6 +20,9 @@ class Square {
     this.dead = false;
     this.knockedBack = false;
     this.lastShootTime = 0;
+    this.animal = animal;
+    this.level = Level;
+    this.experience = experience;
   }
 
   draw() {
@@ -70,8 +73,8 @@ class Square {
 }
 
 class Ally extends Square {
-  constructor(name, attack, HP, x, y, speed, power, color, job) {
-    super(name, attack, HP, x, y, speed, power, color, job);
+  constructor(name, attack, HP, x, y, speed, power, color, job, Level, experience) {
+    super(name, attack, HP, x, y, speed, power, color, job, Level, experience);
   }
 
   collideWith(other) {
@@ -119,6 +122,7 @@ class Ally extends Square {
     balls.push(ball);
     console.log("shoot");
   }
+
   update() {
     if (
       this.job === "ranged" &&
@@ -127,6 +131,14 @@ class Ally extends Square {
     ) {
       this.shoot();
       this.lastShootTime = Date.now();
+    }
+  }
+
+  levelUp() {
+    if (experience == 3 && this.level == 1){
+      this.level += 1;
+    }else if (experience == 4 && this.level == 2){
+      this.level += 1;
     }
   }
 }
