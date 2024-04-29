@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clash of Monsters</title>
+  <link rel="icon" href="sprite/DiJiang.PNG" type="image/PNG">
+  <link rel="shortcut icon" href="sprite/DiJiang.PNG" type="image/PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  <div id="forInstruction">Instructions</div>
+
+  <div id="instruction">
+    <div id="TheInstruction">
+      <h1>Instructions</h1>
+      <p> Clash of Monsters is a game centering on the battle of monsters, in which players pick their roster to battle
+        at
+        each phase. <b>Players have three slots for monsters and a randomized selection of shop cards</b>. In each
+        phase,
+        players
+        make choices regarding the monsters and foods given and try to do their best to build the strongest possible
+        roster.
+      </p>
+      <p>
+        Players <b>begin with 5 HP, losing 1 HP per defeat they receive. The game is lost when a player reaches 0
+          HP.</b>
+        On the
+        other hand, the player <b>gains 1 victory upon winning; when the player reaches 10 victories, the player wins
+          the
+          game</b>.
+
+
+      </p>
+      <p>
+        The shop gets <b>3 new monsters and 2 new foods</b> on phase level <b>2/4/7</b>; the players also receive
+        <b>6/7/8</b> cards starting at
+        these phases. The newer monsters not only have higher basic stats(Attack and HP) but, most importantly, more
+        stats
+        such as(SPEED and POWER) The Player can <b></b>place duplicate monsters to increase their level</b>, maxed at
+        +3.
+        The player
+        can also <b>increase the monster's basic stats with food</b>; note the food invested in a monster is not
+        refundable.
+      </p>
+      <p>
+        There is <b></b>no time limit</b> to the preparation phase, so take your time to plan your team, you can check
+        the
+        detailed
+        stats as well as the background story of monsters with the “Detail” button.
+      </p>
+      <p>
+        That's it! Good luck and have fun!
+      </p>
+      <br>
+      <br>
+      <p>
+        --- The Sleep Deprived Clash of Monsters Developers
+      </p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <button id="closeInstructions">close</button>
+  </div>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="backgroundImg/battleMusic.ogg" type="audio/ogg">
+  </audio>
+
+  <div id="finalResultW" class="finalResult">
+    Victory!
+    <button class="restart">
+      <a href="index.html">Play Again</a>
+    </button>
+  </div>
+
+  <div id="finalResultL" class="finalResult">
+    You have been defeated!
+    <a href="index.html">
+      <button class="restart">
+        Play Again
+      </button>
+    </a>
+  </div>
+
+  <div>
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <div id="W" class="gameResult">
+      <div>Victory</div>
+      <button class="nextPhase">Next Phase</button>
+    </div>
+
+    <div id="L" class="gameResult">
+      <div>Defeat</div>
+      <div>Hp - 1</div>
+      <button class="nextPhase">Next Phase</button>
+    </div>
+  </div>
+
+  <div id="beginGame">
+    <button id="startGame">Start Game</button>
+  </div>
+
+  <div id="preparationPhase">
+    <div id="BattleLog">Victories: 0 Hp: 5</div>
+    <div id="playerTeam">
+      <div id="1" class="playerMon" data-drop-zone="mon1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="emptyslots" src="backgroundImg/empty.PNG" alt="holder" draggable="false">
+      </div>
+      <div id="2" class="playerMon" data-drop-zone="mon2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="emptyslots" src="backgroundImg/empty.PNG" alt="holder" draggable="false">
+      </div>
+      <div id="3" class="playerMon" data-drop-zone="mon3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img class="emptyslots" src="backgroundImg/empty.PNG" alt="holder" draggable="false">
+      </div>
+    </div>
+    <div id="TheShop">
+    </div>
+    <button id="phase2">Begin Battle</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
